@@ -161,7 +161,7 @@ header .search-wrap {
   width: 100%;
   visibility: hidden;
   opacity: 0;
-  transform: .4s;
+  transition: .4s;
 }
 
 header .search {
