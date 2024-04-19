@@ -38,6 +38,7 @@ const searchStarterEl = headerEl.querySelector('.search-starter');
 const searchWrapEl = headerEl.querySelector('.search-wrap');
 const searchCloserEl = searchWrapEl.querySelector('.search-closer');
 const searchShadowEl = searchWrapEl.querySelector('.shadow')
+const searchInputEl = searchWrapEl.querySelector('input')
 const searchAutoCompletesEls = [...searchWrapEl.querySelectorAll('li')]
 
 searchStarterEl.addEventListener('click', showSearch)
@@ -49,6 +50,9 @@ function showSearch() {
   document.documentElement.classList.add('fixed')
   animateHeaderMenu()
   showAutocompletes()
+  setTimeout(function () {
+    searchInputEl.focus()
+  }, 600)
 }
 
 function hideSearch() {
@@ -56,6 +60,7 @@ function hideSearch() {
   document.documentElement.classList.remove('fixed')
   animateHeaderMenu()
   hideAutocompletes()
+  searchInputEl.value = ''
 }
 
 function animateHeaderMenu() {
