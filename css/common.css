@@ -1132,6 +1132,7 @@ nav .menu li.active:hover a {
   color: #03A10E;
 }
 
+/* ACCESSORI SHOP */
 .accessory-shop {
   background-color: var(--color-section);
   text-align: center;
@@ -1153,6 +1154,13 @@ nav .menu li.active:hover a {
 
 .accessory-shop img {
   padding-top: 20px;
+}
+
+/* TRADE */
+.trade {
+  padding: 20px 20px 0;
+  background-color: var(--color-section);
+  text-align: center;
 }
 
 
