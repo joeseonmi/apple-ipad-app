@@ -1012,6 +1012,7 @@ nav .menu li.active:hover a {
   background-image: url("../images/privacy_headline.png");
   transform: translate(57px, 0);
   margin-left: auto;
+  /* 왼쪽의 여백이 자동으로 채워진다 */
   position: relative;
   z-index: 1;
   /* z인덱스 값 적용하려면 포지션 값이 있어야됨 */
@@ -1038,6 +1039,29 @@ nav .menu li.active:hover a {
   height: 31px;
   background-image: url("../images/privacy_caption_touch_id.png");
   transform: translate(533px, 485px);
+}
+
+/* ACCESSIBILITY */
+.accessibility {
+  margin-top: 266px;
+}
+
+.accessibility h1 {
+  width: 384px;
+  height: 270px;
+  background-image: url("../images/accessibility_headline.png");
+}
+
+.accessibility .infos {
+  margin-top: 20px;
+}
+
+.accessibility .figures {
+  position: relative;
+}
+
+.accessibility figure {
+  transform: translate(470px, -620px);
 }
 
 
