@@ -1044,6 +1044,7 @@ nav .menu li.active:hover a {
 /* ACCESSIBILITY */
 .accessibility {
   margin-top: 266px;
+  margin-bottom: 170px;
 }
 
 .accessibility h1 {
@@ -1054,10 +1055,6 @@ nav .menu li.active:hover a {
 
 .accessibility .infos {
   margin-top: 20px;
-}
-
-.accessibility .figures {
-  position: relative;
 }
 
 .accessibility figure {
