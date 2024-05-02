@@ -1132,7 +1132,28 @@ nav .menu li.active:hover a {
   color: #03A10E;
 }
 
+.accessory-shop {
+  background-color: var(--color-section);
+  text-align: center;
+}
 
+.accessory-shop .whitebox {
+  padding-bottom: 0px;
+}
+
+.accessory-shop .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 마진으로 가운데 정렬을 하는 경우 자식요소가 부모요소보다 클때는 적용될 수 없다.
+  (부모요소를 기반으로 정렬되기 때문에) 그래서 flex를 column으로 변경하고 
+  align item을 center 로 줘서 아이템들을 정 가운데를 기준으로 배치하면
+  혹시라도 부모요소가 자신보다 작아지더라도 부모요소보다 크게 배치 할 수 있다. */
+}
+
+.accessory-shop img {
+  padding-top: 20px;
+}
 
 
 
