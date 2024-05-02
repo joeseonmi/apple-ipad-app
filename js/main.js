@@ -81,3 +81,40 @@ function hideAutocompletes() {
   })
   searchAutoCompletesEls.reverse()
 }
+
+//요소의 가시성 관찰
+
+const io = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) {
+      return
+    }
+    entry.target.classList.add('show')
+  })
+});
+
+const infoEls = document.querySelectorAll('.info')
+infoEls.forEach(function (infoEl) {
+  io.observe(infoEl);
+});
+
+
+//비디오 재생
+//버튼 찾아서 클릭이벤트 넣고 클릭하면 하이드?, 비디오도?
+const playEl = document.querySelector('.stage .controller--play')
+const pauseEl = document.querySelector('.stage .controller--pause')
+const videoEl = document.querySelector('.stage video')
+
+playEl.addEventListener('click', function () {
+  //누르면 비디오 플레이되고, 일시정지버튼 보여야됨
+  videoEl.play()
+  playEl.classList.add('hide')
+  pauseEl.classList.remove('hide')
+});
+
+pauseEl.addEventListener('click', function () {
+  //누르면 비디오 정지되고, 재생버튼 보여야됨
+  videoEl.pause()
+  pauseEl.classList.add('hide')
+  playEl.classList.remove('hide')
+});
