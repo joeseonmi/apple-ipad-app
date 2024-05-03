@@ -26,7 +26,6 @@ body {
   word-break: keep-all;
   color: var(--color-font);
   /* 한글의 경우 단어 단위로 브레이크를 하기 어려움, 워드브레이크를 keep-all로 해주면 한글도 단어단위로 브레이크 됨 */
-  height: 6000px;
 }
 
 a {
@@ -42,6 +41,12 @@ img {
 
 p {
   line-height: 1.6;
+}
+
+sup {
+  margin-right: 6px;
+  font-size: .7em;
+  vertical-align: top;
 }
 
 .inner {
@@ -1229,6 +1234,57 @@ nav .menu li.active:hover a {
   font-size: 14px;
 }
 
+/* FOOTER / BUY INFO */
+footer {
+  background-color: var(--color-section);
+}
+
+footer .buy-infos {
+  display: flex;
+  justify-content: space-around;
+  padding: 76px 0;
+  gap: 20px;
+  text-align: center;
+}
+
+footer .buy-infos .icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 10px;
+}
+
+footer .buy-infos h3 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+footer .buy-infos p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+footer .buy-infos a.link {
+  font-size: 14px;
+}
+
+/* FOOTER / WARNING */
+footer .warning {
+  background-color: var(--color-section);
+  padding: 18px 0 10px;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+footer .warning ol {
+  list-style: decimal;
+  padding-left: 16px;
+}
+footer .warning li {
+  font-size: 11px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: var(--color-font-darkgray);
+}
 
 
 @keyframes sprite-icon {
