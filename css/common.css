@@ -300,7 +300,7 @@ header ul.menu > li.basket-starter > a {
   background-image: url("../images/header_bag.svg");
 }
 
-header ul.menu > li > a:hover {
+header ul.menu > li:hover > a {
   opacity: 1;
 }
 
@@ -372,7 +372,7 @@ header .basket ul li a {
   color: var(--color-link);
 }
 
-header .basket ul li a:hover {
+header .basket ul li:hover a {
   text-decoration: underline;
 }
 
@@ -606,7 +606,7 @@ header.searching .search .autocompletes li {
     padding: 16px 0 16px 16px;
     color: var(--color-font-middlegray);
   }
-  header .search .autocompletes ul li a:hover {
+  header .search .autocompletes ul li:hover a {
     background-color: transparent;
     color: var(--color-link);
   }
@@ -1554,7 +1554,7 @@ footer .navigations .map li a {
   color: var(--color-font-darkgray);
 }
 
-footer .navigations .map li a:hover {
+footer .navigations .map li:hover a {
   text-decoration: underline;
 }
 
@@ -1608,10 +1608,6 @@ footer .legal ul li::after {
 
 footer .legal ul li:last-child::after {
   display: none;
-}
-
-footer .legal ul li {
-
 }
 
 footer .legal ul li:hover a {
