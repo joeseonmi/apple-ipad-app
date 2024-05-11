@@ -46,7 +46,10 @@ const searchInputEl = searchWrapEl.querySelector('input')
 const searchAutoCompletesEls = [...searchWrapEl.querySelectorAll('li')]
 
 searchStarterEl.addEventListener('click', showSearch)
-searchCloserEl.addEventListener('click', hideSearch)
+searchCloserEl.addEventListener('click', function (event) {
+  hideSearch()
+  event.stopPropagation()
+})
 searchShadowEl.addEventListener('click', hideSearch)
 
 function showSearch() {
@@ -100,6 +103,7 @@ menuStarterEl.addEventListener('click', function () {
   //애니메이션 주기
   if (headerEl.classList.contains('menuing')) {
     headerEl.classList.remove('menuing')  
+    searchInputEl.value = ''
     palyScroll()
   } else {
     headerEl.classList.add('menuing') 
@@ -112,10 +116,20 @@ const searchTextFieldEl = document.querySelector('header .textfield')
 const searchCancelEl = document.querySelector('header .search-canceler')
 searchTextFieldEl.addEventListener('click', function () {
   headerEl.classList.add('searching--mobile')
+  searchInputEl.focus()
 })
 searchCancelEl.addEventListener('click', function () {
   headerEl.classList.remove('searching--mobile')
 })
+
+window.addEventListener('resize', function () {
+  if (this.window.innerWidth <= 740) {
+    headerEl.classList.remove('searching')
+  } else {
+    headerEl.classList.remove('searching--mobile')
+  }
+})
+
 //요소의 가시성 관찰
 const io = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {
